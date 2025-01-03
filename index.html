@@ -1,131 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Go Games - Gaming Store</title>
-    <link rel="stylesheet" href="(link unavailable)" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
 
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-        overflow: hidden;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Games - Gaming Store</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .navbar {
-        background-color: #333;
-        padding: 5px;
-        height: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    body {
+      font-family: Arial, sans-serif;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      overflow: hidden;
+      background: url("Background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
 
-      .navbar-brand {
-        color: #fff;
-        font-size: 24px;
-      }
+    .navbar {
+      background-color: #2B2C28;
+      padding: 5px;
+      margin-bottom: 20px;
+      height: 55px;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
 
+    .navbar-brand {
+      color: #339989;
+      font-size: 24px;
+    }
+    .my-4{
+      width: 80vw;
+      colour: white;
+    }
+    .btn{
+      text-decoration: none; color: white;
+      padding: 5px; 
+      border: 2px solid white;
+      border-radius: 5px;
+    }
+
+    .jumbotron {
+      transform: rotate(10deg);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      padding: 100px;
+      margin-top: 40px;
+      position: relative;
+      scroll-snap-align: start;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    .display-4 {
+      font-size: 36px;
+    }
+
+    .lead {
+      font-size: 18px;
+    }
+
+    .btn:hover {
+      background-color: #555;
+      border-color: #555;
+    }
+
+    .footer {
+      margin-top: 20px;
+      width: 100%;
+      height: 15px;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Responsive Design (Media Queries) */
+    @media (max-width: 768px) {
       .jumbotron {
-        background-color: #333;
-        color: #fff;
-        padding: 100px;
+        padding: 50px;
       }
 
       .display-4 {
-        font-size: 36px;
+        font-size: 24px;
       }
 
-      .lead {
-        font-size: 18px;
+    }
+
+    /* Animation Styles */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
       }
 
-      .btn-primary {
-        background-color: #333;
-        border-color: #333;
+      to {
+        opacity: 0.5;
+        transform: translateX(0);
+        transform: rotate(10deg); 
       }
+    }
+  </style>
+</head>
 
-      .btn-primary:hover {
-        background-color: #555;
-        border-color: #555;
-      }
-
-      .footer {
-        width: 100%;
-        height: 15px;
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- As a heading -->
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">Go Games </span>
-      </div>
-    </nav>
+<body>
+  <nav class="navbar">
+      <span class="navbar-brand">Go Games </span>
+  </nav>
+  <br />
+  <!-- games -->
+  <div class="jumbotron">
+    <h1 class="display-4">Sphere Parkour</h1>
     <br />
-    <div class="jumbotron">
-      <h1 class="display-4">SphereParkour</h1>
-      <br />
-      <p class="lead">
-        Experience the thrill of parkour in a futuristic, spherical world!
-      </p>
-      <br />
-      <hr class="my-4" />
-      <br />
-      <p>
-        Get ready to jump, dash, and vault your way through challenging levels!
-      </p>
-      <br />
-      <hr class="my-4" />
-      <br />
-      <p>Only For Windows!</p>
-      <br />
-
-      <p class="lead">
-        <a
-          class="btn btn-primary btn-lg"
-          href="https://drive.google.com/file/d/14qNXIkQXXFIWSSfXTBZXG5pHaP8g8TBT/view"
-          role="button"
-          style="
-            text-decoration: none;
-            color: white;
-            height: 5px;
-            width: 5px;
-            border: 2px solid white;
-            padding: 5px;
-            border-radius: 5px;
-          "
-          >Download Now!</a
-        >
-      </p>
-    </div>
+    <p class="lead">Experience the thrill of parkour in a futuristic, spherical world!</p>
     <br />
-    <footer class="footer">
-      <div class="container">
-        <span class="text-muted"
-          >&copy; 2024 Your Company. All rights reserved.</span
-        >
-      </div>
-    </footer>
+    <hr class="my-4">
+    <br />
+    <p>Get ready to jump, dash, and vault your way through challenging levels!</p>
+    <br />
+    <hr class="my-4">
+    <br />
+    <p>Only For Windows!</p>
+    <br />
+      <a class="btn" href="https://drive.google.com/file/d/1_NGI1qSKeYaCUCFyOLle3zohiJYg_RBa/view"
+        role="button"
+    >Download Now!</a>
+  </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <div class="jumbotron">
+    <h1 class="display-4">Sojo Swordsman</h1>
+    <br />
+    <p class="lead">Experience thrilling 2D sword fighting action in this offline Android game!</p>
+    <br />
+    <hr class="my-4">
+    <br />
+    <p>Get ready to slash, parry, and dodge your way to victory in epic battles.</p>
+    <br />
+    <hr class="my-4">
+    <br />
+    <p>Download SojoSwordsman now and embark on a thrilling adventure!</p>
+<br />
+      <a class="btn" href="#"
+        role="button"
+        >Coming Soon!</a>
+  </div>
+
+  <footer class="footer">
+      <span class="text-muted">&copy; 2025 GoGames. All rights reserved.</span>
+  </footer>
+
+
+</body>
+
 </html>
